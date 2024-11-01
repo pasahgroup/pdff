@@ -5,6 +5,9 @@ use Illuminate\Http\Request;
 use PDF;
 use DB;
 use App\Models\employee;
+use JasperPHP\JasperPHP;
+
+require_once('../vendor/autoload.php');
 
 class PDFController extends Controller
 {
@@ -33,6 +36,38 @@ class PDFController extends Controller
         $pdf = PDF::loadView('myPDF', $data);
      return $pdf->download('document.pdf');
     }
+
+// print jasperPDF
+   public function printJ()
+    {
+
+// require __DIR__ . '/vendor/autoload.php';
+
+  $input = app_path('/reports/hello_world.jrxml');
+// $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
+
+$jasper = new JasperPHP;
+$jasper->compile($input)->execute();
+    }
+
+
+ public function printJR()
+    {
+
+  $input = app_path('/reports/hello_world.jasper');
+
+// $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
+  $output = app_path('/reports');
+
+$jasper = new JasperPHP;
+$jasper->process(
+    $input,
+    $output,
+    array("pdf", "rtf")
+)->execute();
+
+    }
+
 
       public function printData()
     {
