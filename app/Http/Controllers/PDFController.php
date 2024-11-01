@@ -56,7 +56,6 @@ $jasper->compile($input)->execute();
     {
 
   $input = app_path('/reports/hello_world.jasper');
-
 // $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
   $output = app_path('/reports');
 
