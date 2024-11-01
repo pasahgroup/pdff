@@ -12,16 +12,16 @@ use App\Http\Controllers\PDFController;
 
 
 
-// Route::get('/c', function () {
+Route::get('/c', function () {
 
-// // require __DIR__ . '/vendor/autoload.php';
+// require __DIR__ . '/vendor/autoload.php';
 
-//   $input = app_path('/reports/hello_world.jrxml');
-// // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
+  $input = app_path('/reports/hello_world.jrxml');
+// $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
 
-// $jasper = new JasperPHP;
-// $jasper->compile($input)->execute();
-// });
+$jasper = new JasperPHP;
+$jasper->compile($input)->execute();
+});
 
 
 Route::get('/r', function () {
