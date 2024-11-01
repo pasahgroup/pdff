@@ -5,9 +5,9 @@ use App\Http\Controllers\PDFController;
 
 // use JasperPHP\JasperPHP as JasperPHP;
 
-// use JasperPHP\JasperPHP;
+use JasperPHP\JasperPHP;
 
-// require_once('../vendor/autoload.php');
+require_once('../vendor/autoload.php');
 
 
 
