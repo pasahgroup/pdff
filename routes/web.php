@@ -44,33 +44,33 @@ $jasper->process(
 
 
 
-Route::get('/java', function () {
+// Route::get('/java', function () {
     
-            $jasper = new JasperPHP;
+//             $jasper = new JasperPHP;
         
-            // Compile a JRXML to Jasper
-             $filename = 'department';
-            $output = app_path('/reports/' . $filename);
-          $t=  $jasper->compile($output)->execute();
+//             // Compile a JRXML to Jasper
+//              $filename = 'department';
+//             $output = app_path('/reports/' . $filename);
+//           $t=  $jasper->compile($output)->execute();
          
-           // $t=  $jasper->compile( '/home/midhun/hi/hello.jrxml')->execute();
-        var_dump($t);
+//            // $t=  $jasper->compile( '/home/midhun/hi/hello.jrxml')->execute();
+//         var_dump($t);
      
-            // Process a Jasper file to PDF and RTF (you can use directly the .jrxml)
-            $jasper->process(
-                '/home/midhun/hi/hello.jrxml',
-                false,
-                array("pdf", "rtf"),
-                array("php_version" => "8.0.3")
-            )->execute();
+//             // Process a Jasper file to PDF and RTF (you can use directly the .jrxml)
+//             $jasper->process(
+//                 '/home/midhun/hi/hello.jrxml',
+//                 false,
+//                 array("pdf", "rtf"),
+//                 array("php_version" => "8.0.3")
+//             )->execute();
         
-            // List the parameters from a Jasper file.
-            $array = $jasper->list_parameters(
-                '/home/midhun/hi/hello.jrxml'
-            )->execute();
-            var_dump($array);
-            return view('welcome');
-        });
+//             // List the parameters from a Jasper file.
+//             $array = $jasper->list_parameters(
+//                 '/home/midhun/hi/hello.jrxml'
+//             )->execute();
+//             var_dump($array);
+//             return view('welcome');
+//         });
 
 
 
