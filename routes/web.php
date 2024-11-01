@@ -5,41 +5,41 @@ use App\Http\Controllers\PDFController;
 
 // use JasperPHP\JasperPHP as JasperPHP;
 
-use JasperPHP\JasperPHP;
+// use JasperPHP\JasperPHP;
 
-require_once('../vendor/autoload.php');
-
-
+// require_once('../vendor/autoload.php');
 
 
-Route::get('/c', function () {
-
-// require __DIR__ . '/vendor/autoload.php';
-
-  $input = app_path('/reports/hello_world.jrxml');
-// $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
-
-$jasper = new JasperPHP;
-$jasper->compile($input)->execute();
-});
 
 
-Route::get('/r', function () {
-// $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jasper'; 
+// Route::get('/c', function () {
 
-  $input = app_path('/reports/hello_world.jasper');
+// // require __DIR__ . '/vendor/autoload.php';
 
-// $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
-  $output = app_path('/reports');
+//   $input = app_path('/reports/hello_world.jrxml');
+// // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
 
-$jasper = new JasperPHP;
-$jasper->process(
-    $input,
-    $output,
-    array("pdf", "rtf")
-)->execute();
+// $jasper = new JasperPHP;
+// $jasper->compile($input)->execute();
+// });
 
-});
+
+// Route::get('/r', function () {
+// // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jasper'; 
+
+//   $input = app_path('/reports/hello_world.jasper');
+
+// // $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
+//   $output = app_path('/reports');
+
+// $jasper = new JasperPHP;
+// $jasper->process(
+//     $input,
+//     $output,
+//     array("pdf", "rtf")
+// )->execute();
+
+// });
 
 
 
