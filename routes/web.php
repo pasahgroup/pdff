@@ -24,22 +24,22 @@ use App\Http\Controllers\PDFController;
 // });
 
 
-// Route::get('/r', function () {
-// // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jasper'; 
+Route::get('/r', function () {
+// $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jasper'; 
 
-//   $input = app_path('/reports/hello_world.jasper');
+  $input = app_path('/reports/hello_world.jasper');
 
-// // $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
-//   $output = app_path('/reports');
+// $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
+  $output = app_path('/reports');
 
-// $jasper = new JasperPHP;
-// $jasper->process(
-//     $input,
-//     $output,
-//     array("pdf", "rtf")
-// )->execute();
+$jasper = new JasperPHP;
+$jasper->process(
+    $input,
+    $output,
+    array("pdf", "rtf")
+)->execute();
 
-// });
+});
 
 
 
