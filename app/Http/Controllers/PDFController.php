@@ -43,7 +43,7 @@ class PDFController extends Controller
 
 // require __DIR__ . '/vendor/autoload.php';
 
-  $input = app_path('/reports/hello_worldx.jrxml');
+  $input = app_path('/reports/hello_world.jrxml');
 // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
 
 //dd($input);
