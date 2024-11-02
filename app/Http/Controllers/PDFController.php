@@ -46,7 +46,7 @@ class PDFController extends Controller
   $input = app_path('/reports/hello_worldx.jrxml');
 // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
 
-
+dd($input);
 $jasper = new JasperPHP;
 $jasper->compile($input)->execute();
 dd('Jaspered');
