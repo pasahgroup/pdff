@@ -48,7 +48,7 @@ class PDFController extends Controller
 
 $jasper = new JasperPHP;
 $jasper->compile($input)->execute();
-//dd($jasper);
+dd('Jaspered');
     }
 
 
@@ -65,7 +65,7 @@ $jasper->process(
     $output,
     array("pdf", "rtf")
 )->execute();
-
+dd('Excuted');
     }
 
 
