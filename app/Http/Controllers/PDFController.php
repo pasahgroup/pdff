@@ -78,7 +78,7 @@ dd('Jaspered');
   $input = app_path('/reports/hello_world.jasper');
 // $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
   $output = app_path('/reportsx');
-
+dd($output);
 $jasper = new JasperPHP;
 $jasper->process(
     $input,
