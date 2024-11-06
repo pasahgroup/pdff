@@ -77,8 +77,9 @@ dd('Jaspered');
 
   $input = app_path('/reports/hello_world.jasper');
 // $output = __DIR__ . '/vendor/geekcom/phpjasper/examples';  
-  $output = app_path('/reportsx');
-dd($output);
+  $output = app_path('/reports');
+//dd($output);
+
 $jasper = new JasperPHP;
 $jasper->process(
     $input,
@@ -88,6 +89,30 @@ $jasper->process(
 dd('Excutedx');
     }
 
+ public function db()
+    {
+
+$data = [
+            'title' => 'Laravel PDF Example',
+            'date' => date('m/d/Y'),
+        ];
+        $pdf = PDF::loadView('padding', $data);
+
+        return $pdf->download('padding.pdf');
+    }
+
+
+  public function padding()
+    {
+
+$data = [
+            'title' => 'Laravel PDF Example',
+            'date' => date('m/d/Y'),
+        ];
+        $pdf = PDF::loadView('padding', $data);
+
+        return $pdf->download('padding.pdf');
+    }
 
       public function printData()
     {

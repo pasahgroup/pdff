@@ -75,6 +75,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('padding', [PDFController::class, 'padding']);
+Route::get('db', [PDFController::class, 'db']);
+
+
 Route::get('c', [PDFController::class, 'printJ']);
 Route::get('r', [PDFController::class, 'printJR']);
 
