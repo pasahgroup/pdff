@@ -1,3 +1,4 @@
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -7,15 +8,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-
 <style type="text/css">
     .red{
       color: red;
     }
-        @page {
+    .page {
   margin: 1;
 }
   </style>
+ <!--  <style type="text/css">
+      @page { margin: 50px 0; }
+    .firstpage { 
+      position: absolute;
+      page-break-after: always; 
+      top: -50px; // compensating for @page top margin
+      width: 100%;
+      margin: 0;
+    }
+    .otherpages{ margin: 0 50px; }
+  </style> -->
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -105,11 +116,53 @@
                 </table>
               </div>
 
-                <a href="/print_data">PrintData</a>
-
         </div>
       </div>
       <!-- /.card -->
+
+
+
+
+
+<table class="table">
+  <caption>List of users</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
 
     </section>
     <!-- /.content -->

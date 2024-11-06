@@ -83,3 +83,5 @@ Route::get('printPDF', [PDFController::class, 'printPDF']);
 
 Route::get('printData', [PDFController::class, 'printData']);
 Route::get('print_data', [PDFController::class, 'print_data']);
+
+Route::get('pp', [PDFController::class, 'pdf']);

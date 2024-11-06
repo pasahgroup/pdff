@@ -37,10 +37,28 @@ class PDFController extends Controller
      return $pdf->download('document.pdf');
     }
 
+  public function pdf()
+    {
+//dd('ppp');
+           $employees=employee::get();
+        $data = [
+            'title' => 'Laravel PDF Example',
+            'date' => date('m/d/Y'),
+            'employees' => $employees,
+        ];
+
+    // $employees=employee::get();
+     //dd($data);
+
+        //return view('myPDF', $data);
+
+        $pdf = PDF::loadView('welcome', $data);
+     return $pdf->download('document.pdf');
+    }
+
 // print jasperPDF
    public function printJ()
     {
-
 // require __DIR__ . '/vendor/autoload.php';
 
   $input = app_path('/reports/hello_world.jrxml');
@@ -89,7 +107,11 @@ $data = [
      // return $pdf->download('document.pdf');
     }
 
-      public function print_data()
+     
+
+
+
+    public function print_data()
     {
       $datax = DB::table('employees')->paginate(50);
 
@@ -104,7 +126,13 @@ $data = [
         //return view('data',compact('datas'));
       // $pdf = PDF::loadView('data', ['datas' => $data]);
           //return view('data',$data);
-     $pdf = PDF::loadView('data',$data);
+     //$dompdf->set_paper("A4", "portrait");
+      $pdf = PDF::loadView('dataR',$data);  
+     //$pdf->set_paper(DEFAULT_PDF_PAPER_SIZE, 'portrait');
+      $pdf->set_paper("A4", "landscape");
+     // $pdf->render();
+   //$pdf->stream();
+
    return $pdf->download('document_hg.pdf');
     }
 }
