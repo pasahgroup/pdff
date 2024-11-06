@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use PDF;
+// use PDF;
 use DB;
 use App\Models\employee;
 use JasperPHP\JasperPHP;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 require_once('../vendor/autoload.php');
 
