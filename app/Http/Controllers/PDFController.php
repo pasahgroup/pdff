@@ -5,8 +5,9 @@ use Illuminate\Http\Request;
 // use PDF;
 use DB;
 use App\Models\employee;
-use JasperPHP\JasperPHP;
+// use JasperPHP\JasperPHP;
 use Barryvdh\DomPDF\Facade\Pdf;
+use PHPJasper\PHPJasper;
 
 require_once('../vendor/autoload.php');
 
@@ -66,7 +67,8 @@ class PDFController extends Controller
 // $input = __DIR__ . '/vendor/geekcom/phpjasper/examples/hello_world.jrxml';   
 
 //dd($input);
-$jasper = new JasperPHP;
+$jasper = new PHPJasper;
+// $jasper = new JasperPHP;
 $jasper->compile($input)->execute();
 dd('Jaspered');
     }
@@ -80,7 +82,8 @@ dd('Jaspered');
   $output = app_path('/reports');
 //dd($output);
 
-$jasper = new JasperPHP;
+// $jasper = new JasperPHP;
+$jasper = new PHPJasper;
 $jasper->process(
     $input,
     $output,
