@@ -85,7 +85,7 @@ $jasper->process(
     $output,
     array("pdf", "rtf")
 )->execute();
-dd('Excuted');
+dd('Excutedx');
     }
 
 
